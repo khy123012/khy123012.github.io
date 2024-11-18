@@ -1,1 +1,274 @@
-Hello World
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+   <head>
+       
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/a-asian-ninja" rel="stylesheet">
+                
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <title>Title</title>
+       <link rel="stylesheet" href="">
+
+       <style>
+ 
+        #onepage{
+            overflow-x: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(251, 252, 251);
+            box-shadow: inset 0.1px 0.1px 120px 0.1px rgba(0, 0, 0, 0.226);
+        }
+
+        #oneheader{
+            background-color: inherit;
+            width: 100vw;
+            height: 12vh;
+            box-shadow: inset 0.1px 0.1px 120px 0.1px rgba(0, 0, 0, 0.226);
+        
+            display: flex;
+            justify-content: space-between;
+        }
+        #imageslide{
+            width: 100vw;
+            height: 50vh;
+            background-image: url('https://wallpaper.dog/large/11002143.jpg');
+            background-size: cover;
+            position: relative;
+            box-shadow:  0.1px 0.1px 12px 0.1px rgba(0, 0, 0, 0.226);
+            box-shadow: inherit 3px 3px 10px rgba(0, 0, 0, 0.89);
+            
+        }
+        
+        @import url('https://fonts.cdnfonts.com/css/a-asian-ninja');
+                
+
+        #imageslide > span{
+            color: rgba(255, 255, 255, 0.89);
+            text-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.925);
+            
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.87);
+            font-family: 'a Asian Ninja', sans-serif;
+                  
+            left: 70%;
+            top: 40%;
+            font-size: 110px;
+            position: absolute;
+        }
+
+        #banner{
+            width: 20%;
+            height: 100%;
+            background-image: url('sam.png');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: left;
+            float: left;
+        
+        }
+
+        #tab{
+            height: 100%;
+            width: 80%;
+            float: right;
+            background-color: rgba(0, 0, 0, 0.082);
+
+            position: relative;
+        }
+
+        #tab > ul > li{
+            display: inline-block;
+            
+            text-align: center;
+            line-height: 2;
+            border-left: 1px black dashed;
+            border-right: 1px black dashed;
+
+
+            font-size: 20px;
+            width: 100px;
+            margin: auto;
+            cursor: pointer;
+            text-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.925);
+            
+           
+            font-family: 'a Asian Ninja', sans-serif;
+            transition: all 500ms;
+        }
+
+        #tab > ul > li:hover{
+           
+           
+            
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.534);
+            transform: scale(1.3)
+        }
+
+        #tab > ul{
+            top: 35%;
+        width: 100%;
+            display: flex;
+        align-items: center;
+        position: absolute;
+        }
+
+        #bottomonepage{
+            height:  138vh;
+            width: 100vw;
+        text-align: center;
+        position: relative;
+        }
+
+ 
+        #bottomonepage > #tttp > p:hover{
+            font-size: 60px;
+            color: rgb(255, 172, 18);
+        }
+
+        #bottomonepage > #tttp > p{
+            cursor: pointer;
+            font-size: 50px;
+            transition-duration: 300ms;
+            text-shadow: 2px 2px2px rgb(167, 166, 166);
+            font-family: 'a Asian Ninja', sans-serif;
+            color: rgb(44, 34, 12);
+            
+            transform: translateX(-50%);
+            top: 6%;
+            left: 50%;
+            position: absolute;
+        } 
+
+        #pagetwo{
+            overflow-x: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(251, 252, 251);
+            box-shadow: inset 0.1px 0.1px 120px 0.1px rgba(0, 0, 0, 0.226);
+        
+        }
+
+        .imagebox{
+            border: 3px blacck solid;
+            width: 100vw;
+            height: 500px;
+            background-color: rgba(253, 238, 227, 0.884);
+            justify-items: center;
+            overflow: hidden;
+            
+        
+        }
+
+        #tttp{
+            
+            background-color: rgba(252, 245, 240, 0.884);
+            width: 100vw;
+            height: 200px;
+        }
+        #listimage{ 
+  
+            position: relative;
+            width: 100vw;
+            height: 70%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #imgww{
+
+            box-shadow: 2px 2px 2px 2px black;
+            border: solid 2px slategrey;
+            border-radius: 20px;
+
+            right: 55%;
+            top: 22%;
+            
+            position: absolute;
+            width: 40vw;
+            
+        }
+
+        #imgtt{
+
+            
+            box-shadow: 2px 2px 2px 2px black;
+            border: solid 2px slategrey;
+            border-radius: 20px;
+
+            left: 55%;
+            top: 22%;
+            
+            position: absolute;
+            width: 40vw;
+            
+        }
+    </style>
+       
+   </head>
+           
+   <body>
+
+    <main id="onepage" style="overflow-x: hidden;">
+    <header id="oneheader">
+        <div id="banner"></div>
+
+        <div id="tab">
+            <ul>
+                <li>Menu</li>
+                <li>Game</li>
+                <li>Shop</li>
+                <li>Social</li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div id="imageslide">
+        <span>SINZEN</span>
+    </div>
+
+    <div id="bottomonepage" style="background-color: rgba(165, 42, 42, 0);">
+       <div id="tttp"> <p id="textthisgame">This game?</p></div>
+
+        <div class="imagebox">
+            
+                <img id="imgww" src="https://i.ytimg.com/vi/X7vIb0vWiBM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGYgZihmMA8=&rs=AOn4CLDTYvTO2ZbkZI0PQn0LNXjRWuJh0g" alt="">
+            
+                <img id="imgtt" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-b5hlBvgs7FMaPrUQKOPPcPPADS7EzDWgu-4YhCmU0GISQvhHgQhOkKCLcRStE57nNcA&usqp=CAU" alt="">
+        </div>
+    </div>
+
+    <div id="pagetwo">
+
+
+    </div>
+</main>
+       
+
+<script>
+    const $menu = $("#oneheader > #tab > ul > li").eq(0);
+
+    var $oneheader = $("#oneheader");
+ 
+    var oneheaderheight = $oneheader.height();
+
+    $menu.on("click",function(){
+    
+
+        console.log("1");
+
+        window.scrollBy({
+            top: 500, // 페이지 상단에서 500px 위치로 이동
+            behavior: "smooth",
+        });
+ 
+     
+    })
+
+</script>
+   </body>
+           
+</html>
