@@ -104,7 +104,7 @@
            
             
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.534);
-            transform: scale(1.3)
+            
         }
 
         #tab > ul{
@@ -207,6 +207,39 @@
         }
     </style>
        
+
+    <style>
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: scale(1.3);
+                 background-color: rgba(139, 9, 0, 0.356);
+                 border-radius: 50%;
+                 
+            }
+         
+            50%{
+                
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .shake {
+            animation: shake 600ms
+        }
+        
+
+        #oneheader #tab ul li {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+    </style>
    </head>
            
    <body>
@@ -249,24 +282,29 @@
        
 
 <script>
-    const $menu = $("#oneheader > #tab > ul > li").eq(0);
+   
 
     var $oneheader = $("#oneheader");
  
     var oneheaderheight = $oneheader.height();
+    const $menu = $("#oneheader > #tab > ul > li");
 
-    $menu.on("click",function(){
+    $menu.on("click", function () {
+        //  
+        
+        var index = $(this).index();
+        console.log(index + 1);  
+
+        const $this = $(this);
+
+        $this.addClass("shake");
+
+        $this.on("animationend", function () {
+            $this.removeClass("shake");
+        });
+    });
     
 
-        console.log("1");
-
-        window.scrollBy({
-            top: 1500, // 페이지 상단에서 500px 위치로 이동
-            behavior: "smooth",
-        });
- 
-     
-    })
 
 </script>
    </body>
