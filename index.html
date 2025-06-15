@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이버보안경찰학과</title>
+    <style>
+       
+        *{margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+:root {
+--dark-bg: #0a0a0a;
+--darker-bg: #050505;
+--accent: #2ecc71;
+--accent-glow: rgba(46, 204, 113, 0.4);
+--text: #ffffff;
+}
+
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+background-color: var(--dark-bg);
+color: var(--text);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 1.5rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(10, 10, 10, 0.95);
+backdrop-filter: blur(10px);
+z-index: 10;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+font-family: 'Danjo-bold-Regular';
+font-size: 1.8rem;
+font-weight: 700;
+color: var(--accent);
+text-decoration: none;
+position: relative;
+padding-left: 2.5rem;
+}
+
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+
+.nav-links a {
+color: var(--text);
+text-decoration: none;
+font-weight: 500;
+transition: all 0.3s ease;
+position: relative;
+}
+
+.nav-links a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background: var(--accent);
+transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+/* Hero Section */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 12% 5%;
+background: radial-gradient(circle at 77% 40%, var(--accent-glow) 12%, transparent 45%);
+
+
+}
+
+.hero-content {
+flex: 1;
+padding-right: 5rem;
+
+}
+
+.hero-image {
+flex: 1;
+text-align: center;
+position: relative;
+border : 0 -5px 5px #201f17 inset;
+border-radius: 9px;
+}
+
+.profile-img {
+width: 400px;
+height: 400px;
+border-radius: 50%;
+object-fit: cover;
+
+
+
+animation: float 3s ease-in-out infinite;
+filter: grayscale(0.2) contrast(1.1);
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+
+@font-face {
+    font-family: '양진체';
+    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero h1 {
+font-size: 4rem;
+margin-bottom: 1.5rem;
+background: linear-gradient(45deg, var(--accent) 35%, rgb(218, 217, 217) 30%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-family: '양진체';
+}
+
+.hero p {
+font-size: 1.2rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+max-width: 600px;
+}
+
+.cta-button {
+ 
+    font-weight: 600;
+display: inline-block;
+padding: 1rem 2rem;
+background: linear-gradient(45deg, var(--accent), #27ae60);
+color: white;
+border-radius: 8px;
+text-decoration: none;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+/* Skills Section */
+.skills {
+padding: 5rem 5%;
+background: var(--darker-bg);
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.skill-card {
+padding: 2rem;
+border-radius: 15px;
+background: rgba(90, 90, 90, 0.05);
+transition: all 0.3s ease;
+border: 1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(5px);
+cursor: pointer;
+}
+
+.skill-card:hover {
+transform: translateY(-10px);
+border-color: var(--accent);
+box-shadow: 0 10px 30px var(--accent-glow);
+
+}
+
+.skill-card i {
+font-size: 2.5rem;
+color: var(--accent);
+margin-bottom: 1rem;
+
+}
+
+/* Footer */
+footer {
+background: var(--darker-bg);
+padding: 3rem 5%;
+text-align: center;
+border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-links {
+margin-top: 2rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+}
+
+.social-links a {
+color: var(--text);
+font-size: 1.5rem;
+transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+color: var(--accent);
+transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+.hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.hero-content {
+    padding-right: 0;
+    margin-bottom: 3rem;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+}
+
+.nav-links {
+    display: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+
+.white{
+    background-color: white;
+    --dark-bg: white;
+--darker-bg: white;
+}
+
+#wf{
+ 
+    display: none;
+    background-color: white;
+
+}
+
+}
+    </style>
+    <!-- link to fontawesome for inserting social media icons -->
+    <!-- link to css file -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo" style=>광주대학교</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">게시판</a></li>
+            <li><a href="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02">공지사항</a></li>
+            <li><a href="https://cyfo.gwangju.ac.kr/bbs/content.php?co_id=a0101">학과 소개</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 style="">사이버보안경찰학과</h1>
+            <img src="" alt="">
+            <p style=" font-family: 'ChosunGu';">사이버보안전문가의 꿈을 이루세요</p>
+            <p class="highlight" style=" font-family: 'ChosunGu';">정보보안을 책임지는 화이트해커 인재 육성</p>
+            <a href="https://cyfo.gwangju.ac.kr/" class="cta-button" >자세히 알아보기</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/check-shield-security-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cyber-crime-pack-icons-6296279.png?f=webp" alt="Profile" class="profile-img">
+        </div>
+    </section>
+                 <div id="fww1" style="overflow:hidden;position:fixed;height:330px;width:500px;top:15%;left:4.5%;z-index:100;background-color:white;">
+                     <iframe id="wf1" src="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02" width="500px" height="270px"></iframe>
+                </div>
+
+               
+                
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card" id="skc1">
+                <i class="fas fa-code"></i>
+                <h3>해킹동아리 GUS 게시판</h3>
+         <br>
+                     <p>해킹 대회 / 콤퍼런스</p>
+                
+            </div>
+            <div class="skill-card"  id="skc2" class="nos">
+                <i class="fas fa-server"></i>
+                <h3>학습 게시판</h3>
+                <br>
+                <p>모의 해킹, 버그 바운티, 리버싱</p>
+            </div>
+            <div class="skill-card"  id="skc3" class="nos">
+                <i class="fas fa-paint-brush"></i>
+                <h3>커뮤니티</h3>
+                <br>
+                <p>보안과 관련된 커뮤니티</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© MZcode01 All rights reserved</p>
+        <br>
+        <p style="font-weight: 700;">Modified version © 2025 khy123012. All rights reserved</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          
+        </div>
+    </footer>
+
+    <!-- 클릭시 아이프레임 쇼 -->
+     <script>
+      //  .skill-card .wff
+      const $sk1 = $("#skc1");
+      const $sk2 = $("#skc2");
+      const $sk3 = $("#skc3");
+      const $fww1 = $("#fww1");
+      const $nos = $(".nos");
+      $fww1.hide();
+
+      $sk1.on("click",function(){
+        $fww1.fadeToggle();
+      })
+
+      $sk2.on("click",function(){
+        alert("미구현 입니다");
+      })
+      
+      $sk3.on("click",function(){
+        alert("미구현 입니다");
+      })
+      
+     </script><!--제이쿼리임-->
+     <script>
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            window.scrollY > 50 ? 
+                navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.98)' :
+                navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+        });
+     </script>
+</body>
+</html>
