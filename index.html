@@ -359,6 +359,7 @@ transform: translateY(-3px);
         <p>© MZcode01 All rights reserved</p>
         <br>
         <p style="font-weight: 700;">Modified version © 2025 khy123012. All rights reserved</p>
+        <p id="adminm" style="float:left;font-weight: 700;color:#111111;cursor:pointer">관리자</p>
         <div class="social-links">
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -376,6 +377,11 @@ transform: translateY(-3px);
       const $sk3 = $("#skc3");
       const $fww1 = $("#fww1");
       const $nos = $(".nos");
+      const $adminm = $("#adminm");
+      $adminm.on("click",function(){
+ window.location.href = "https://cyfo.gwangju.ac.kr/adm";
+
+      })
       $fww1.hide();
 
       $sk1.on("click",function(){
