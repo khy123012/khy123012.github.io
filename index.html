@@ -342,7 +342,7 @@ transform: translateY(-3px);
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">게시판</a></li>
             <li><a href="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=f0101">공지사항</a></li>
-            <li><a href="https://www.gwangju.ac.kr/page/?site=gwangju&mn=491" id="hakk">학사 일정</a></li>
+            <li><a href="" id="hakk">학사 일정</a></li>
         </ul>
     </nav>
 
@@ -427,8 +427,10 @@ transform: translateY(-3px);
       })
       $fww1.hide();
 
-    $hkk.on("click",function(){window.open("https://www.gwangju.ac.kr/page/?site=gwangju&mn=491", "_blank", "width=800,height=600");
-                              }
+    $hakk.on("click",function()
+    {window.open("https://www.gwangju.ac.kr/page/?site=gwangju&mn=491", "_blank", "width=1300,height=600")}
+    );
+                              
       $sk1.on("click",function(){
        // $fww1.fadeToggle();
      window.location.href = "https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02";
