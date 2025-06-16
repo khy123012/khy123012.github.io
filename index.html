@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사이버보안경찰학과</title>
-
-
     <style>
        
-
         *{margin: 0;
 padding: 0;
 box-sizing: border-box;
 
 }
 
+
+
 :root {
+    
 --dark-bg: #0a0a0a;
 --darker-bg: #050505;
 --accent: #2ecc71;
@@ -161,13 +161,41 @@ filter: grayscale(0.2) contrast(1.1);
 }
 
 .hero h1 {
-font-size: 4rem;
+font-size: 4.5rem;
+margin-bottom: 1.5rem;
+background: linear-gradient(45deg, var(--accent) 35%, rgb(241, 241, 241) 30%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-family: '양진체';
+}
+
+
+@media(max-width: 460px){
+
+    .hero h1 {
+font-size: 2.2rem;
 margin-bottom: 1.5rem;
 background: linear-gradient(45deg, var(--accent) 35%, rgb(218, 217, 217) 30%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   font-family: '양진체';
 }
+}
+
+
+
+@media(max-width: 1030px){
+
+    .hero h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+background: linear-gradient(45deg, var(--accent) 35%, rgb(218, 217, 217) 60%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-family: '양진체';
+}
+}
+
 
 .hero p {
 font-size: 1.2rem;
@@ -313,8 +341,8 @@ transform: translateY(-3px);
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">게시판</a></li>
-            <li><a href="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=f0101">공지사항</a></li>
-            <li><a href="https://www.gwangju.ac.kr/page/?site=gwangju&mn=491">학사 일정</a></li>
+            <li><a href="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02">공지사항</a></li>
+            <li><a href="https://cyfo.gwangju.ac.kr/bbs/content.php?co_id=a0101">학과 소개</a></li>
         </ul>
     </nav>
 
@@ -325,7 +353,7 @@ transform: translateY(-3px);
             <img src="" alt="">
             <p style=" font-family: 'ChosunGu';">사이버보안전문가의 꿈을 이루세요</p>
             <p class="highlight" style=" font-family: 'ChosunGu';">정보보안을 책임지는 화이트해커 인재 육성</p>
-            <a href="https://cyfo.gwangju.ac.kr/" class="cta-button" >광주대 바로가기</a>
+            <a href="https://cyfo.gwangju.ac.kr/" class="cta-button" >자세히 알아보기</a>
         </div>
         <div class="hero-image">
             <img src="https://cdn3d.iconscout.com/3d/premium/thumb/check-shield-security-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cyber-crime-pack-icons-6296279.png?f=webp" alt="Profile" class="profile-img">
@@ -339,7 +367,7 @@ transform: translateY(-3px);
                 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <h2>여러 이벤트</h2>
+        <h2>Technical Expertise</h2>
         <div class="skills-grid">
             <div class="skill-card" id="skc1">
                 <i class="fas fa-code"></i>
@@ -380,6 +408,10 @@ transform: translateY(-3px);
 
     <!-- 클릭시 아이프레임 쇼 -->
      <script>
+
+    
+
+
       //  .skill-card .wff
       const $sk1 = $("#skc1");
       const $sk2 = $("#skc2");
@@ -394,10 +426,7 @@ transform: translateY(-3px);
       $fww1.hide();
 
       $sk1.on("click",function(){
-        //$fww1.fadeToggle();
-       window.location.href = "https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02"
-    window.open("https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02", "_blank", "width=800,height=600");
-
+        $fww1.fadeToggle();
       })
 
       $sk2.on("click",function(){
@@ -412,6 +441,7 @@ transform: translateY(-3px);
      <script>
 
         // Smooth scrolling
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
