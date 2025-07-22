@@ -4,334 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사이버보안경찰학과</title>
-    <style>
-       
-        *{margin: 0;
-padding: 0;
-box-sizing: border-box;
-
-}
-
-
-
-:root {
-    
---dark-bg: #0a0a0a;
---darker-bg: #050505;
---accent: #2ecc71;
---accent-glow: rgba(46, 204, 113, 0.4);
---text: #ffffff;
-}
-
-@font-face {
-    font-family: 'ChosunGu';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Cafe24Ohsquare';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Danjo-bold-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'RixYeoljeongdo_Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-body {
-background-color: var(--dark-bg);
-color: var(--text);
-line-height: 1.6;
-overflow-x: hidden;
-}
-
-/* Navigation */
-.navbar {
-position: fixed;
-top: 0;
-width: 100%;
-padding: 1.5rem 5%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: rgba(10, 10, 10, 0.95);
-backdrop-filter: blur(10px);
-z-index: 10;
-border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.logo {
-font-family: 'Danjo-bold-Regular';
-font-size: 1.8rem;
-font-weight: 700;
-color: var(--accent);
-text-decoration: none;
-position: relative;
-padding-left: 2.5rem;
-}
-
-.nav-links {
-display: flex;
-gap: 2rem;
-list-style: none;
-}
-
-.nav-links a {
-color: var(--text);
-text-decoration: none;
-font-weight: 500;
-transition: all 0.3s ease;
-position: relative;
-}
-
-.nav-links a::after {
-content: '';
-position: absolute;
-bottom: -5px;
-left: 0;
-width: 0;
-height: 2px;
-background: var(--accent);
-transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-width: 100%;
-}
-
-/* Hero Section */
-.hero {
-min-height: 100vh;
-display: flex;
-align-items: center;
-padding: 12% 5%;
-background: radial-gradient(circle at 77% 40%, var(--accent-glow) 12%, transparent 45%);
-
-
-}
-
-.hero-content {
-flex: 1;
-padding-right: 5rem;
-
-}
-
-.hero-image {
-flex: 1;
-text-align: center;
-position: relative;
-border : 0 -5px 5px #201f17 inset;
-border-radius: 9px;
-}
-
-.profile-img {
-width: 400px;
-height: 400px;
-border-radius: 50%;
-object-fit: cover;
-
-
-
-animation: float 3s ease-in-out infinite;
-filter: grayscale(0.2) contrast(1.1);
-}
-
-@keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-20px); }
-}
-
-@font-face {
-    font-family: '양진체';
-    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.hero h1 {
-font-size: 4.5rem;
-margin-bottom: 1.5rem;
-background: linear-gradient(45deg, var(--accent) 35%, rgb(241, 241, 241) 30%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-  font-family: '양진체';
-}
-
-
-@media(max-width: 460px){
-
-    .hero h1 {
-font-size: 2.2rem;
-margin-bottom: 1.5rem;
-background: linear-gradient(45deg, var(--accent) 35%, rgb(218, 217, 217) 30%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-  font-family: '양진체';
-}
-}
-
-
-
-@media(max-width: 1030px){
-
-    .hero h1 {
-font-size: 2rem;
-margin-bottom: 1.5rem;
-background: linear-gradient(45deg, var(--accent) 35%, rgb(218, 217, 217) 60%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-  font-family: '양진체';
-}
-}
-
-
-.hero p {
-font-size: 1.2rem;
-margin-bottom: 2rem;
-opacity: 0.9;
-max-width: 600px;
-}
-
-.cta-button {
- 
-    font-weight: 600;
-display: inline-block;
-padding: 1rem 2rem;
-background: linear-gradient(45deg, var(--accent), #27ae60);
-color: white;
-border-radius: 8px;
-text-decoration: none;
-transition: all 0.3s ease;
-position: relative;
-overflow: hidden;
-}
-
-/* Skills Section */
-.skills {
-padding: 5rem 5%;
-background: var(--darker-bg);
-}
-
-.skills-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 2rem;
-margin-top: 3rem;
-}
-
-.skill-card {
-padding: 2rem;
-border-radius: 15px;
-background: rgba(90, 90, 90, 0.05);
-transition: all 0.3s ease;
-border: 1px solid rgba(255,255,255,0.1);
-backdrop-filter: blur(5px);
-cursor: pointer;
-}
-
-.skill-card:hover {
-transform: translateY(-10px);
-border-color: var(--accent);
-box-shadow: 0 10px 30px var(--accent-glow);
-
-}
-#fww1:hover{
-    transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.1);
-backdrop-filter: blur(5px);
-border-color: var(--accent);
-box-shadow: 0 10px 30px var(--accent-glow);
-}
-.skill-card i {
-font-size: 2.5rem;
-color: var(--accent);
-margin-bottom: 1rem;
-
-}
-
-/* Footer */
-footer {
-background: var(--darker-bg);
-padding: 3rem 5%;
-text-align: center;
-border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.social-links {
-margin-top: 2rem;
-display: flex;
-justify-content: center;
-gap: 2rem;
-}
-
-.social-links a {
-color: var(--text);
-font-size: 1.5rem;
-transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-color: var(--accent);
-transform: translateY(-3px);
-}
-
-@media (max-width: 768px) {
-.hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 8rem;
-}
-
-.hero-content {
-    padding-right: 0;
-    margin-bottom: 3rem;
-}
-
-.profile-img {
-    width: 280px;
-    height: 280px;
-}
-
-.nav-links {
-    display: none;
-}
-
-.logo {
-    font-size: 1.5rem;
-    padding-left: 2rem;
-}
-
-
-.white{
-    background-color: white;
-    --dark-bg: white;
---darker-bg: white;
-}
-
-#wf{
- 
-    display: none;
-    background-color: white;
-
-}
-
-}
-    </style>
+           <link rel="stylesheet" href="style.css">
     <!-- link to fontawesome for inserting social media icons -->
     <!-- link to css file -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    
+    <style>
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -339,10 +21,11 @@ transform: translateY(-3px);
     <nav class="navbar">
         <a href="#home" class="logo" style=>광주대학교</a>
         <ul class="nav-links">
+            <li id="gus" style="cursor: pointer;"><a>GUS</a></li><!--GUS-->
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">게시판</a></li>
-            <li><a href="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=f0101">공지사항</a></li>
             <li><a href="" id="hakk">학사 일정</a></li>
+       
         </ul>
     </nav>
 
@@ -405,7 +88,7 @@ transform: translateY(-3px);
           
         </div>
     </footer>
-
+ 
     <!-- 클릭시 아이프레임 쇼 -->
      <script>
 
@@ -419,10 +102,12 @@ transform: translateY(-3px);
       const $fww1 = $("#fww1");
       const $nos = $(".nos");
       const $hakk = $("#hakk");
+
+      const $gus123 = $("#gus");
     
       const $adminm = $("#adminm");
       $adminm.on("click",function(){
- window.location.href = "https://cyfo.gwangju.ac.kr/adm";
+        window.location.href = "https://cyfo.gwangju.ac.kr/adm";
 
       })
       $fww1.hide();
@@ -446,7 +131,25 @@ transform: translateY(-3px);
         alert("미구현 입니다");
       })
       
-     </script><!--제이쿼리임-->
+
+
+      //gus 메뉴 클릭시 로그인 페이지로 이동
+      $gus123.on("click",function(){
+         window.location.href = "login.html";
+      })
+    
+      
+
+    
+    
+    
+    
+    </script><!--제이쿼리임-->
+
+
+
+
+
      <script>
 
         // Smooth scrolling
