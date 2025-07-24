@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이버보안경찰학과</title>
+           <link rel="stylesheet" href="style.css">
+    <!-- link to fontawesome for inserting social media icons -->
+    <!-- link to css file -->
+
+    
+    <style>
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo" style=>광주대학교</a>
+        <ul class="nav-links">
+            <li id="gus" style="cursor: pointer;"><a>GUS</a></li><!--GUS-->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">게시판</a></li>
+            <li><a href="" id="hakk">학사 일정</a></li>
+       
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 style="">사이버보안경찰학과</h1>
+            <img src="" alt="">
+            <p style=" font-family: 'ChosunGu';">사이버보안전문가의 꿈을 이루세요</p>
+            <p class="highlight" style=" font-family: 'ChosunGu';">정보보안을 책임지는 화이트해커 인재 육성</p>
+            <a href="https://cyfo.gwangju.ac.kr/" class="cta-button" >광주대 바로가기</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/check-shield-security-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cyber-crime-pack-icons-6296279.png?f=webp" alt="Profile" class="profile-img">
+        </div>
+    </section>
+                 <div id="fww1" style="border-radius: 30px;overflow:hidden;position:fixed;height:330px;width:500px;top:15%;left:4.5%;z-index:100;background-color:white;">
+                     <iframe id="wf1" src="https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02" width="500px" height="270px"></iframe>
+                </div>
+
+               
+                
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>더 많은 정보</h2>
+        <div class="skills-grid">
+            <div class="skill-card" id="skc1">
+                <i class="fas fa-code"></i>
+                <h3>해킹동아리 GUS 게시판</h3>
+         <br>
+                     <p>해킹 대회 / 콤퍼런스</p>
+                
+            </div>
+            <div class="skill-card"  id="skc2" class="nos">
+                <i class="fas fa-server"></i>
+                <h3>학습 게시판</h3>
+                <br>
+                <p>모의 해킹, 버그 바운티, 리버싱</p>
+            </div>
+            <div class="skill-card"  id="skc3" class="nos">
+                <i class="fas fa-paint-brush"></i>
+                <h3>커뮤니티</h3>
+                <br>
+                <p>보안과 관련된 커뮤니티</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© MZcode01 All rights reserved</p>
+        <br>
+        <p style="font-weight: 700;">Modified version © 2025 khy123012. All rights reserved</p>
+        <p id="adminm" style="float:left;font-weight: 700;color:#111111;cursor:pointer">관리자</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          
+        </div>
+    </footer>
+ 
+    <!-- 클릭시 아이프레임 쇼 -->
+     <script>
+
+    
+
+
+      //  .skill-card .wff
+      const $sk1 = $("#skc1");
+      const $sk2 = $("#skc2");
+      const $sk3 = $("#skc3");
+      const $fww1 = $("#fww1");
+      const $nos = $(".nos");
+      const $hakk = $("#hakk");
+
+      const $gus123 = $("#gus");
+    
+      const $adminm = $("#adminm");
+      $adminm.on("click",function(){
+        window.location.href = "https://cyfo.gwangju.ac.kr/adm";
+
+      })
+      $fww1.hide();
+
+    $hakk.on("click",function()
+    {window.open("https://www.gwangju.ac.kr/page/?site=gwangju&mn=491", "_blank", "width=1300,height=600")}
+    );
+                              
+      $sk1.on("click",function(){
+       // $fww1.fadeToggle();
+     window.location.href = "https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02";
+        window.open("https://cyfo.gwangju.ac.kr/bbs/board.php?bo_table=gus02", "_blank", "width=800,height=600");
+
+      })
+
+      $sk2.on("click",function(){
+        alert("미구현 입니다");
+      })
+      
+      $sk3.on("click",function(){
+        alert("미구현 입니다");
+      })
+      
+
+
+      //gus 메뉴 클릭시 로그인 페이지로 이동
+      $gus123.on("click",function(){
+         window.location.href = "login.html";
+      })
+    
+      
+
+    
+    
+    
+    
+    </script><!--제이쿼리임-->
+
+
+
+
+
+     <script>
+
+        // Smooth scrolling
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            window.scrollY > 50 ? 
+                navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.98)' :
+                navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+        });
+     </script>
+</body>
+</html>
