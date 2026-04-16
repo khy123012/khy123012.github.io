@@ -114,7 +114,7 @@
 ## 설치
 
 ```bash
-git clone https://github.com/<your-username>/recon-stealth.git
+git clone https://github.com/khy123012/recon-stealth.git
 cd recon-stealth
 ```
 
